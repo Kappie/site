@@ -1,8 +1,10 @@
 Kapteijns::Application.routes.draw do
 
+  resources :posts
+
   root 'static_pages#home'
   match "/cursus_programmeren", to: "static_pages#cursus_programmeren", via: "get"
-
+  match "/blog", to: "posts#index", via: "get"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
