@@ -1,0 +1,70 @@
+/* variables, mixins, etc. */
+$creamLight: #FCFFF5;
+$creamDark: #D1DBBD;
+$blueLight: #91AA9D;
+$blueMedium: #3E606F;
+$blueDark: #193441;
+$orange: #8D5A1A;
+$red: #743621;
+$purple: #A788B2;
+$green: #569956;
+
+
+html {
+  background-color: $creamLight;
+
+  body {
+    background-color: inherit;
+    font-size: large;
+    color: $blueDark;
+  }
+}
+
+#header-title {
+  padding-bottom: 35px;
+  
+  a {
+    color: $blueDark;
+    font-size: 200%;
+    text-decoration: none;
+  }
+}
+
+#content {
+  h1 {
+    margin: 0px 0px 0px 0px;
+  }
+
+  p {
+
+    a {
+      color: $orange;
+      text-decoration: none;
+      border-bottom: thin dotted;
+
+    }
+  }
+}
+
+#sidebar {
+  ul {
+
+    li {
+
+      a {
+        color: $blueDark;
+
+        &:hover {
+          background-color: $blueMedium;
+          color: $creamDark;
+        }
+      }
+    }
+  }
+}
+
+#geert {
+  width: 60%;
+  height: auto;
+  padding: 0px 0px 15px 0px;
+}
