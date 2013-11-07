@@ -32,6 +32,27 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+  # rubygems version is not rails 4 compatible
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
+end
+
+group :test do
+  gem 'capybara', '2.1.0'
+  gem 'factory_girl_rails'
+  gem 'cucumber', '1.2.5' # Spork not supported as of Cucumber 1.3.0, need to use 1.2.5
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
+
+# Twitter Bootstrap with sass
+gem 'bootstrap-sass-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

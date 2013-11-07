@@ -1,4 +1,9 @@
 Kapteijns::Application.routes.draw do
+
+  root 'static_pages#home'
+  match "/cursus_programmeren", to: "static_pages#cursus_programmeren", via: "get"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
