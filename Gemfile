@@ -53,6 +53,9 @@ end
 # Twitter Bootstrap with sass
 gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 
+# Paperclip to attach image files to models
+gem "paperclip", "~> 3.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
