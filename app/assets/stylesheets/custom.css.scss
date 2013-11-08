@@ -9,59 +9,58 @@ $red: #743621;
 $purple: #A788B2;
 $green: #569956;
 
+/* override bootstrap variables */
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$body-bg: $creamLight;
+$text-color: $blueDark;
+$link-color: $orange;
 
-html {
-  background-color: $creamLight;
+@import "bootstrap";
 
-  body {
-    background-color: inherit;
-    font-size: large;
-    color: $blueDark;
-  }
+
+body {
+  font-size: large;
 }
 
 #header-title {
   padding-bottom: 40px;
-  
+  font-size: 400%;
+ 
   a {
     color: $blueDark;
-    font-size: 200%;
     text-decoration: none;
   }
 }
 
 #content {
+
   h1 {
     margin: 0px 0px 20px 0px;
-  }
-
-  p {
 
     a {
-      color: $orange;
-      text-decoration: none;
-      border-bottom: thin dotted;
-
+      color: $blueDark;
     }
+  }
+
+  a {
+    color: $orange;
+    text-decoration: none;
   }
 }
 
 #sidebar {
-  ul {
 
-    li {
+  a {
+    color: $blueDark;
 
-      a {
-        color: $blueDark;
-
-        &:hover {
-          background-color: $blueMedium;
-          color: $creamDark;
-        }
-      }
+    &:hover {
+      background-color: $blueMedium;
+      color: $creamDark;
     }
   }
 }
+
 
 #geert {
   width: 60%;
@@ -80,13 +79,8 @@ html {
   &:last-child {
     border-bottom: none;
   }
-
-  h1 {
-    
-    a {
-      color: $blueDark;
-      text-decoration: none;
-    }
-  }
 }
 
+.post-body {
+  padding: 0px 0px 20px 0px;
+}

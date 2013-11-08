@@ -1,6 +1,6 @@
 Kapteijns::Application.routes.draw do
 
-  resources :posts
+  resources :posts, :except => :index
 
   root 'static_pages#home'
   match "/cursus_programmeren", to: "static_pages#cursus_programmeren", via: "get"

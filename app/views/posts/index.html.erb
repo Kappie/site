@@ -1,10 +1,7 @@
 <%= provide(:title, "Blog") %>
 
 <% @posts.reverse_each do |post| %>
-  <article class="post">
-    <h1><%= link_to post.title, post %></h1>
-    <%= post.body %>
-  </article>
+  <%= render "index_listing", :post => post %>
 <% end %>
 
 

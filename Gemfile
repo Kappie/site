@@ -51,7 +51,7 @@ group :test do
 end
 
 # Twitter Bootstrap with sass
-gem 'bootstrap-sass-rails'
+gem 'bootstrap-sass', '~> 3.0.1.0.rc'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

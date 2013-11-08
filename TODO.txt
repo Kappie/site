@@ -1,0 +1,4 @@
+TODO: 
+- Sort out class names of index listing and show listing of blog posts
+- snippet toevoegen als field in database, snippets laten zien op index, niet hele post.
+
