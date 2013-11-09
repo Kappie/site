@@ -1,6 +1,8 @@
+<% provide(:title, "Login") %>
+
 <p>
   <%= form_tag sessions_path do %>
-    <%= label_tag(:password, "Password") %>
+    <%= label_tag(:password, "Password") %><br>
     <%= password_field_tag :password %>
   <% end %>
 </p>

@@ -1,6 +1,6 @@
-<% provide(:title, "Nieuwe post") %>
+<%= provide(:title, "Edit post") %>
 
-<%= form_for @post, url: {action: "create"} do |f| %>
+<%= form_for @post, url: {action: "update"} do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
