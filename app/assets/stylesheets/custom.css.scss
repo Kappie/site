@@ -10,13 +10,15 @@ $purple: #A788B2;
 $green: #569956;
 
 /* override bootstrap variables */
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Trebuchet MS", Helvetica, sans-serif;
 $font-family-base: $font-family-sans-serif;
+
 $body-bg: $creamLight;
 $text-color: $blueDark;
 $link-color: $orange;
 
 @import "bootstrap";
+
 
 
 body {

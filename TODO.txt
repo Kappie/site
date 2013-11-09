@@ -1,4 +1,9 @@
 TODO: 
 - Sort out class names of index listing and show listing of blog posts
 - snippet toevoegen als field in database, snippets laten zien op index, niet hele post.
+- page layout of books/book page
+- page layout of blog/post page (with date written)
+
+
+- MAKE ADMIN LAYER!!!
 
