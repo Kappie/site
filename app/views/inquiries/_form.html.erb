@@ -1,0 +1,30 @@
+<%= form_for inquiry do |f| %>
+
+  <% if inquiry.errors.any? %>
+    <ul>
+      <% inquiry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p style="display: none;">
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname %>
+  </p>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.submit "Schrijf me in" %>
+  </p>
+<% end %>

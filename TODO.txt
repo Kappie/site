@@ -1,6 +1,5 @@
 TODO: 
 
-- ### cursus programmeren
 - ## sorting functions on book page
 - ## comments
 
@@ -15,6 +14,10 @@ Styling
 - show book
 
 - paginate buttons
+
+- cursus form
+
+
 
 ISSUES
 - can't modify book cover image dimensions, problem with paperclip or bootstrap?
