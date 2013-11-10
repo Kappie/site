@@ -1,3 +1,10 @@
-<%= provide(:title, @post.title) %>
+<% provide(:title, @post.title) %>
+
 <%= render "show_listing", :post => @post %>
-<%= link_to "Return to blog", blog_path %>
+
+<% if admin? %>
+  <p><%= link_to "Edit", edit_post_path(@post) %></p>
+  <p><%= link_to "Destroy", post_path(@post), :confirm => "Zeker weten?", :method => :delete %></p>
+<% end %>
+
+<p><%= link_to "Terug naar blog", blog_path %></p>

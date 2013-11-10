@@ -1,15 +1,9 @@
 <% provide(:title, "Nieuwe post") %>
 
 <%= form_for @post, url: {action: "create"} do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body, size: "60x12" %>
-  </p>
-  <p>
-    <%= f.submit "Verzend" %>
-  </p>
+
+  <%= render "post_form", :f => f %>
+
 <% end %>
+
+<%= link_to "Terug naar blog", blog_path %>

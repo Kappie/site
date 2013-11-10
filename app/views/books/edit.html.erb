@@ -1,0 +1,7 @@
+<% provide(:title, "Edit boek") %>
+
+<%= form_for @book, url: {action: "update"} do |f| %>
+
+  <%= render "book_form", :f => f %>
+
+<% end %>

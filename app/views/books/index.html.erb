@@ -1,10 +1,15 @@
-<%= provide(:title, "Boeken") %>
+<% provide(:title, "Boeken") %>
 
 <h1>Boeken die ik heb gelezen</h1>
 <p>Klik op een titel om de recensie te lezen. Ik update deze pagina als ik meer lees.</p>
 
+<% if admin? %>
+  <%= link_to "Nieuw boek", new_book_path %>
+<% end %>
+
+
 <% @books.reverse_each do |book| %>
-  <h3><%= book.title %></h3>
+  <h3><%= link_to book.title, book %></h3>
   <div><%= book.abstract %></div>
   <div><%= image_tag book.cover.url(:medium) %></div>
 <% end %>

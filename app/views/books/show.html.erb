@@ -1,0 +1,10 @@
+<% provide(:title, @book.title) %>
+
+<%= @book.title %>
+
+<% if admin? %>
+  <p><%= link_to "Edit", edit_book_path(@book) %></p>
+  <p><%= link_to "Destroy", book_path(@book), :confirm => "Zeker weten?", :method => :delete %></p>
+<% end %>
+
+<p><%= link_to "Terug naar boeken", boeken_path %></p>
