@@ -10,6 +10,7 @@
 
 <% @books.reverse_each do |book| %>
   <h3><%= link_to book.title, book %></h3>
+  <p><%= book.date_read.strftime("%B %Y") %></p>
   <div><%= book.abstract %></div>
   <div><%= image_tag book.cover.url(:medium) %></div>
 <% end %>

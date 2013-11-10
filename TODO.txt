@@ -1,8 +1,8 @@
 TODO: 
 
 - snippet toevoegen als field in database, snippets laten zien op index, niet hele post.
-- add date_read to book model
 - books/1 => boeken/1
+- paginate blog and books pages
 
 Styling
 -------
