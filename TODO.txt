@@ -4,8 +4,6 @@ TODO:
 - ## sorting functions on book page
 - ## comments
 
-- partials voor /boeken en /books/:id
-
 Styling
 -------
 
@@ -15,7 +13,10 @@ Styling
 
 - book index listing
 - show book
--
 
+- paginate buttons
+
+ISSUES
+- can't modify book cover image dimensions, problem with paperclip or bootstrap?
 
 

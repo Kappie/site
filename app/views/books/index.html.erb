@@ -1,19 +1,20 @@
 <% provide(:title, "Boeken") %>
 
 <h1>Boeken die ik heb gelezen</h1>
-<p>Klik op een titel om de recensie te lezen. Ik update deze pagina als ik meer lees.</p>
+<p>
+  Klik op een titel om de recensie te lezen. Ik update deze pagina als ik meer lees.
+</p>
 
 <% if admin? %>
-  <%= link_to "Nieuw boek", new_book_path %>
+  <p><%= link_to "Nieuw boek", new_book_path %></p>
 <% end %>
 
 <%= will_paginate @books %>
 
 <% @books.each do |book| %>
-  <h3><%= link_to book.title, book %></h3>
-  <p><%= book.date_read.strftime("%B %Y") %></p>
-  <div><%= book.abstract %></div>
-  <div><%= image_tag book.cover.url(:medium) %></div>
+
+  <%= render "index_listing", :book => book %>
+
 <% end %>
 
 <%= will_paginate @books %>
