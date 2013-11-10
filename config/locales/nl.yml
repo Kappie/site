@@ -1,0 +1,17 @@
+nl:
+  will_paginate:
+    previous_label: "&#8592; Vorige"
+    next_label: "Volgende &#8594;"
+    page_gap: "&hellip;"
+
+  date:
+    formats:
+      short: "%B %Y"
+      default: "%D %m, %Y"
+
+    month_names: [~, Januari, Februari, Maart, April, Mei, Juni, Juli, Augustus, September, Oktober, November, December]
+
+    order:
+      - year
+      - month
+      - day

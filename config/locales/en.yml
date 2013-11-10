@@ -21,6 +21,8 @@
 
 en:
   hello: "Hello world"
+
+nl:
   will_paginate:
     previous_label: "&#8592; Vorige"
     next_label: "Volgende &#8594;"
