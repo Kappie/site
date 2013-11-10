@@ -1,4 +1,7 @@
   <article class="post">
     <h1><%= link_to post.title, post %></h1>
-    <div><%= post.body.html_safe %></div>
+    <div>
+      <%= post.body.html_safe.truncate(300, :separator => " ",
+        :omission => " [...]") %>
+    </div>
   </article>

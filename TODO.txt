@@ -1,8 +1,9 @@
 TODO: 
 
-- snippet toevoegen als field in database, snippets laten zien op index, niet hele post.
-- books/1 => boeken/1
-- paginate blog and books pages
+- # paginate blog and books pages
+- ### cursus programmeren
+- ## sorting functions on book page
+- # comments
 
 Styling
 -------
