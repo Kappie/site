@@ -2,7 +2,8 @@ class BooksController < ApplicationController
   before_filter :authorize, :except => [:index, :show]
 
   def index
-    @books = Book.all
+    @books = Book.order("date_read DESC").paginate(:page => params[:page],
+      :per_page => 5)
   end
 
   def show
