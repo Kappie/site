@@ -4,8 +4,12 @@
   <div><%= link_to "Nieuwe post", new_post_path %></div>
 <% end %>
 
-<% @posts.reverse_each do |post| %>
+<%= will_paginate @posts %>
+
+<% @posts.each do |post| %>
 
   <%= render "index_listing", :post => post %>
   
 <% end %>
+
+<%= will_paginate @posts %>

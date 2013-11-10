@@ -3,7 +3,7 @@ TODO:
 - # paginate blog and books pages
 - ### cursus programmeren
 - ## sorting functions on book page
-- # comments
+- ## comments
 
 Styling
 -------
