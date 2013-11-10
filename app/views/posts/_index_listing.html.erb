@@ -1,6 +1,9 @@
   <article class="post">
     <h1><%= link_to post.title, post %></h1>
     <div>
+      <p>
+        <%= l(post.created_at, format: "%-d %B, %Y") %>
+      </p>
       <%= post.body.html_safe.truncate(300, :separator => " ",
         :omission => " [...]") %>
     </div>
