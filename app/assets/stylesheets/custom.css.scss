@@ -38,7 +38,8 @@ body {
 #content {
 
   h1 {
-    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 40px 0px;
+    margin: 0px 0px 0px 0px;
 
     a {
       color: $blueDark;
@@ -46,7 +47,6 @@ body {
   }
 
   a {
-    color: $orange;
     text-decoration: none;
   }
 }
@@ -70,19 +70,72 @@ body {
   padding: 0px 0px 15px 0px;
 }
 
-.post {
-  padding: 40px 0px 40px 0px;
-  border-bottom: thin dotted $blueDark;
 
-  &:first-child {
-    padding: 0px 0px 40px 0px;
-  }
+#posts-container {
 
-  &:last-child {
-    border-bottom: none;
+  .post-index-listing {
+    padding: 30px 0px 40px 0px;
+    border-bottom: thin dotted $blueDark;
+
+    h1 {
+      padding: 0px 0px 10px 0px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    div {
+      padding-top: 30px;
+    }
   }
 }
 
 .post-body {
   padding: 0px 0px 20px 0px;
 }
+
+/* pagination buttons */
+
+.pagination {
+  padding: 0px 0px 30px 0px;
+  margin: 0px 0px 0px 0px;
+
+  &:last-child {
+    padding: 30px 0px 30px 0px;
+  }
+
+  background: $creamLight;
+  cursor: default;
+  /* self-clearing method: */ }
+  .pagination a, .pagination span, .pagination em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .pagination .current {
+    font-style: normal;
+    background: $blueMedium;
+    color: $creamDark;
+    border: 1px solid $blueMedium; }
+  .pagination a {
+    text-decoration: none;
+    color: $blueDark;
+    border: 1px solid $blueDark; }
+    .pagination a:hover, .pagination a:focus {
+      color: $creamDark;
+      background: $blueMedium;
+      border-color: $blueMedium; }
+  .pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .pagination {
+    height: 1%; }
+  *:first-child + html .pagination {
+    overflow: hidden; }

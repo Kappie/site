@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -11,16 +12,16 @@
   <div class="container">
 
     <div id="header" class="row">
-      <div class="col-xs-3">
+      <div class="col-sm-3">
       </div>
 
-      <div class="col-xs-9">
+      <div class="col-sm-9">
         <h1 id="header-title"><%= link_to "Geert Kapteijns", root_path %></h1>
       </div>
     </div>
 
     <div class="row">
-      <div id="sidebar" class="col-xs-3">
+      <div id="sidebar" class="col-sm-3">
         <ul class="nav nav-pills nav-stacked">
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Cursus programmeren", cursus_programmeren_path %></li>
@@ -29,7 +30,7 @@
         </ul>
       </div>
 
-      <div id="content" class="col-xs-9">
+      <div id="content" class="col-sm-9">
         <%= yield %>
       </div>
     </div>

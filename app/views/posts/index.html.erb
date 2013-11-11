@@ -6,10 +6,14 @@
 
 <%= will_paginate @posts %>
 
-<% @posts.each do |post| %>
+<div id="posts-container">
 
-  <%= render "index_listing", :post => post %>
-  
-<% end %>
+  <% @posts.each do |post| %>
+
+    <%= render "index_listing", :post => post %>
+    
+  <% end %>
+
+</div>
 
 <%= will_paginate @posts %>

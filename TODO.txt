@@ -1,21 +1,27 @@
 TODO: 
 
+Functionaliteit
+---------------
+
 - ## sorting functions on book page
 - ## comments
 
 Styling
 -------
 
-- blog listing
 - show post
 - admin links? make buttons
 
 - book index listing
 - show book
 
-- paginate buttons
-
 - cursus form
+
+Algemeen
+--------
+
+- mailadres moet ergens op site!
+- footer?
 
 
 
