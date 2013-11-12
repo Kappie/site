@@ -1,14 +1,14 @@
-<div class="row">
+<div class="book row">
 
   <div class="col-md-4">
-    <%= image_tag book.cover.url(:medium) %>
+    <%= link_to image_tag(book.cover.url(:medium)), book %>
   </div>
 
   <div class="col-md-6">
-    <h3><%= link_to book.title, book %></h3>
-    <p><%= l(book.date_read, format: "%B %Y") %></p>
-    <p><%= book.rating %> / 10</p> 
-    <%= book.abstract %>
+    <h2><%= link_to book.title, book %></h2>
+    <small><%= l(book.date_read, format: "%B %Y") %></small><br>
+    <small><%= book.rating %> / 10</small>
+    <div class="abstract"><%= book.abstract %></div>
   </div>
 
 </div>

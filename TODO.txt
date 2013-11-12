@@ -3,13 +3,14 @@ TODO:
 Functionaliteit
 ---------------
 
+- ADD AUTHOR TO BOOK MODEL
+- link from comments from blog index
+- fix up book index, book show
+- teksten home, cursuspagina
+
 Styling
 -------
 
-- show post (+ comments)
-- admin links? make buttons
-
-- book index listing
 - show book
 
 - cursus form

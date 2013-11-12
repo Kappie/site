@@ -1,9 +1,9 @@
 <% provide(:title, "Boeken") %>
 
 <h1>Boeken die ik heb gelezen</h1>
-<p>
+<div id ="book-intro">
   Klik op een titel om de recensie te lezen. Ik update deze pagina als ik meer lees.
-</p>
+</div>
 
 <% if admin? %>
   <p><%= link_to "Nieuw boek", new_book_path %></p>
@@ -11,10 +11,12 @@
 
 <%= will_paginate @books %>
 
-<% @books.each do |book| %>
+<div class="book-container">
+  <% @books.each do |book| %>
 
-  <%= render "index_listing", :book => book %>
+    <%= render "index_listing", :book => book %>
 
-<% end %>
+  <% end %>
+</div>
 
 <%= will_paginate @books %>
