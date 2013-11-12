@@ -93,13 +93,42 @@ body {
   }
 }
 
-.comments {
+#comments {
   padding: 40px 0px 0px 0px;
 
+  h1 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 20px 0px;
+  }
+
   .new_comment {
-    padding: 20px 0px 0px 0px;
+    padding: 0px 0px 40px 0px;
+  }
+
+  .author {
+    font-style: italic;
+    padding: 20px 0px 20px 0px;
+  }
+
+  .body {
+    padding: 0px 0px 20px 0px;
+    font-size: medium;
+    max-width: 60%;
+    border-bottom: thin dotted $blueDark;
+    
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
+
+.simplebox:focus {
+  border: solid 1px $blueDark;
+  box-shadow: inset 1px 1px 1px $blueLight;
+  transition: none;
+
+}
+
 /* pagination buttons */
 
 .pagination {

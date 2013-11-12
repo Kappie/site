@@ -1,15 +1,15 @@
-<div class="comments">
+<div id="comments">
   <h1>Laat een reactie achter:</h1>
 
   <%= form_for [@post, @post.comments.build], :html => 
     { :role => "form" } do |f| %>
     <div class="form-group">
       <%= f.label :author, "Naam" %>
-      <%= f.text_field :author, :class => "form-control" %>
+      <%= f.text_field :author, :class => "form-control simplebox" %>
     </div>
     <div class="form-group">
       <%= f.label :body, "Bericht" %><br>
-      <%= f.text_area :body, :class => "form-control", :rows => "5" %>
+      <%= f.text_area :body, :class => "form-control simplebox", :rows => "5" %>
     </div>
     <div class="form-group">
       <%= f.submit "Verzend", :class => "btn btn-default" %>
@@ -22,13 +22,15 @@
   a delete request to /posts/:post_id/comments, which doesn't exist. %>
 
   <% unless @post.comments.size == 1 %>
-    <h1>Reacties</h1>
+    <h1><%= pluralize(@post.comments.size - 1, "reactie", "reacties") %></h1>
   <% end %>
 
   <% @post.comments.each do |comment| %>
     <% unless comment.author.blank? %>
-      <p><%= comment.author %></p>
-      <p><%= comment.body %></p>
+      <div class="author">
+        <%= comment.author + " (" + l(comment.created_at, format: "%-d %B, %Y") + ")" %>
+      </div>
+      <div class="body"><%= comment.body %></div>
       <% if admin? %>
         <p>
           <%= link_to 'Destroy Comment', post_comment_path(@post, comment),
