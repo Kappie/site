@@ -154,11 +154,15 @@ body {
   }
 }
 
+/* override CSS form styling */
 .simplebox:focus {
   border: solid 1px $blueDark;
   box-shadow: inset 1px 1px 1px $blueLight;
   transition: none;
+}
 
+.simplebutton, .simplebutton:hover {
+  color: $blueDark;
 }
 
 /* pagination buttons */

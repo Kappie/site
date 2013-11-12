@@ -7,6 +7,7 @@ Functionaliteit
 - link from comments from blog index
 - fix up book index, book show
 - teksten home, cursuspagina
+- SCHOOL in inquiry
 
 Styling
 -------
