@@ -3,13 +3,10 @@ TODO:
 Functionaliteit
 ---------------
 
-- ## sorting functions on book page
-- ## comments
-
 Styling
 -------
 
-- show post
+- show post (+ comments)
 - admin links? make buttons
 
 - book index listing
@@ -27,5 +24,6 @@ Algemeen
 
 ISSUES
 - can't modify book cover image dimensions, problem with paperclip or bootstrap?
+
 
 

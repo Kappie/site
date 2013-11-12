@@ -1,4 +1,7 @@
-<article>
+<article class="post">
   <h1><%= @post.title %></h1>
-  <div class="post-body"><%= @post.body.html_safe %></div>
+  <small>
+    <%= l(post.created_at, format: "%-d %B, %Y") %>
+  </small>
+  <div><%= @post.body.html_safe %></div>
 </article>

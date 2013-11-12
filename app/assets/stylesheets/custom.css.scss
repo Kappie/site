@@ -20,7 +20,6 @@ $link-color: $orange;
 @import "bootstrap";
 
 
-
 body {
   font-size: large;
 }
@@ -38,7 +37,7 @@ body {
 #content {
 
   h1 {
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 15px 0px;
     margin: 0px 0px 0px 0px;
 
     a {
@@ -71,39 +70,41 @@ body {
 }
 
 
-#posts-container {
 
-  .post-index-listing {
-    padding: 30px 0px 40px 0px;
-    border-bottom: thin dotted $blueDark;
 
-    h1 {
-      padding: 0px 0px 10px 0px;
-    }
+.post-index-listing, .post {
+  padding: 40px 0px 40px 0px;
+  border-bottom: thin dotted $blueDark;
 
-    &:last-child {
-      border: none;
-    }
+  h1 {
+    padding: 0px 0px 15px 0px;
+  }
 
-    div {
-      padding-top: 30px;
-    }
+  &:first-child {
+    padding-top: 0px;
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  div {
+    padding: 30px 0px 15px 0px;
   }
 }
 
-.post-body {
-  padding: 0px 0px 20px 0px;
-}
+.comments {
+  padding: 40px 0px 0px 0px;
 
+  .new_comment {
+    padding: 20px 0px 0px 0px;
+  }
+}
 /* pagination buttons */
 
 .pagination {
-  padding: 0px 0px 30px 0px;
+  padding: 0px 0px 40px 0px;
   margin: 0px 0px 0px 0px;
-
-  &:last-child {
-    padding: 30px 0px 30px 0px;
-  }
 
   background: $creamLight;
   cursor: default;

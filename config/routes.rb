@@ -1,6 +1,8 @@
 Kapteijns::Application.routes.draw do
 
-  resources :posts, :except => :index
+  resources :posts, :except => :index do
+    resources :comments, :only => [:create, :destroy]
+  end
   resources :books, :except => :index
   resources :sessions, :except => [:index, :update, :edit]
   resources :inquiries, :only => [:new, :create]

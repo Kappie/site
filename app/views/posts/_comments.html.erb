@@ -1,0 +1,41 @@
+<div class="comments">
+  <h1>Laat een reactie achter:</h1>
+
+  <%= form_for [@post, @post.comments.build], :html => 
+    { :role => "form" } do |f| %>
+    <div class="form-group">
+      <%= f.label :author, "Naam" %>
+      <%= f.text_field :author, :class => "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body, "Bericht" %><br>
+      <%= f.text_area :body, :class => "form-control", :rows => "5" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Verzend", :class => "btn btn-default" %>
+    </div>
+  <% end %>
+
+  <%# @post.comments.build earlier on the page creates
+  a phantom comment for this post. So this block gets entered even when there are
+  no real comments. If this statement is not present, Rails renders a link to
+  a delete request to /posts/:post_id/comments, which doesn't exist. %>
+
+  <% unless @post.comments.size == 1 %>
+    <h1>Reacties</h1>
+  <% end %>
+
+  <% @post.comments.each do |comment| %>
+    <% unless comment.author.blank? %>
+      <p><%= comment.author %></p>
+      <p><%= comment.body %></p>
+      <% if admin? %>
+        <p>
+          <%= link_to 'Destroy Comment', post_comment_path(@post, comment),
+                   method: :delete,
+                   confirm: 'Are you sure?' %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
