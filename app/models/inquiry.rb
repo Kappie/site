@@ -6,7 +6,7 @@ class Inquiry
 
   # Nickname will be a hidden field in the form.
   # Spambots filling it in will be blocked.
-  attr_accessor :name, :email, :message, :nickname
+  attr_accessor :name, :email, :school, :message, :nickname
 
   validates :name, :presence => true
   validates :email, :format => { :with => /@/}
@@ -24,7 +24,7 @@ class Inquiry
       :to => "ghkapteijns@gmail.com",
       :from => %("#{name}" <#{email}>),
       :reply_to => email,
-      :subject => "Inschrijving cursus",
+      :subject => "#{name} van #{school} schrijft zich in voor cursus.",
       :body => message,
       :html_body => simple_format(message)
       })

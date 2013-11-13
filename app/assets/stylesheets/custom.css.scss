@@ -5,7 +5,7 @@ $blueLight: #91AA9D;
 $blueMedium: #3E606F;
 $blueDark: #193441;
 $orange: #8D5A1A;
-$red: #743621;
+$red: #4E262A;
 $purple: #A788B2;
 $green: #569956;
 
@@ -15,7 +15,7 @@ $font-family-base: $font-family-sans-serif;
 
 $body-bg: $creamLight;
 $text-color: $blueDark;
-$link-color: $orange;
+$link-color: $red;
 
 @import "bootstrap";
 
@@ -23,8 +23,8 @@ $link-color: $orange;
 body {
   font-size: large;
 
-  a, a:hover {
-    text-decoration: none;
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -43,10 +43,6 @@ body {
   h1 {
     padding: 0px 0px 15px 0px;
     margin: 0px 0px 0px 0px;
-
-    a {
-      color: $blueDark;
-    }
   }
 
 }
@@ -85,8 +81,13 @@ body {
     padding: 30px 0px 15px 0px;
   }
 
-  a:hover {
-    text-decoration: underline;
+  a {
+    color: $blueDark;
+
+    &:hover {
+      color: $red;
+      text-decoration: underline;
+    }
   }
 
   &:first-child {
@@ -146,11 +147,26 @@ body {
       color: $blueDark;
       &:hover {
         text-decoration: underline;
+        color: $red;
       }
     }
 
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 10px 0px;
+  }
+}
+
+#book-page {
+  #book-details {
+    padding: 30px 0px 30px 0px;
+  }
+
+  #book-abstract {
+    padding: 0px 0px 30px 0px;
+  }
+
+  #book-review {
+    padding: 10px 0px 0px 0px;
   }
 }
 

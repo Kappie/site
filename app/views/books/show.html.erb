@@ -1,10 +1,29 @@
 <% provide(:title, @book.title) %>
+<h1><%= @book.author + " - " + @book.title %></h1>
 
-<%= @book.title %>
+<div id="book-page">
+  <div class="row" id="book-details">
+    <div class="col-md-4 ">
+      <%= image_tag(@book.cover.url(:medium)) %>
+    </div>
+    <div class="col-md-8">
+      <p>Gelezen: <%= l(@book.date_read, format: "%B %Y") %></p>
+      <p>Score: <%= @book.rating%> / 10</p>
+      <p>ISBN: <%= @book.isbn %></p>
+    </div>
+  </div>
+
+  <div id = "book-abstract">
+    <%= @book.abstract %>
+  </div>
+
+  <h2>Mijn mening:</h2>
+  <div id = "book-review">
+    <%= @book.review %>
+  </div>
+</div>
 
 <% if admin? %>
   <p><%= link_to "Edit", edit_book_path(@book) %></p>
   <p><%= link_to "Destroy", book_path(@book), :confirm => "Zeker weten?", :method => :delete %></p>
 <% end %>
-
-<p><%= link_to "Terug naar boeken", boeken_path %></p>

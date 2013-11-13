@@ -3,18 +3,15 @@ TODO:
 Functionaliteit
 ---------------
 
-- ADD AUTHOR TO BOOK MODEL
-- link from comments from blog index
-- fix up book index, book show
-- teksten home, cursuspagina
-- SCHOOL in inquiry
+- fix up book index, book show, cursus ##
+- teksten home, cursuspagina #
+- make errors for invalid comment #
 
 Styling
 -------
 
-- show book
-
-- cursus form
+- cursus form #
+- style errors ##
 
 Algemeen
 --------

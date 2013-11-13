@@ -8,6 +8,6 @@
         :omission => " [...]") %>
     </div>
     <small>
-      <%= pluralize(post.comments.size, "reactie", "reacties") %>
+      <%= link_to(pluralize(post.comments.size, "reactie", "reacties"), post_path(post, :anchor => "comments")) %>
     </small>
   </article>
